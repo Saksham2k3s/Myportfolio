@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState} from "react";
 import { PulseLoader } from "react-spinners";
+import { Typewriter } from 'react-simple-typewriter'
 
 function Home() {
   useEffect(() => {
@@ -46,19 +47,26 @@ function Home() {
               data-aos-easing="linear"
               data-aos-duration="1500"
             >
-              <h5 className="h3">Hii, my name is</h5>
+              <h5 className="h3"> ✋ Hii, my name is</h5>
               <h1 className="display-4 text-white">Saksham Shrivastava.</h1>
               <h1 className="display-4 text-white">
-                I build things for the web.
+                I am a   <Typewriter
+            words={['Frontend Developer', 'Open Source Contributor', 'Enthusiastic Student.']}
+            loop={5} 
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
               </h1>
               <p className="pr-2 text-white">
                 I am dedicated and aspiring{" "}
                 <span className="highlight">web developer</span> with a strong
                 passion for creating innovative and{" "}
                 <span className="highlight"> user-friendly </span> web
-                experiences. I am eager to further develop my career in web
-                development and constantly seek opportunities to learn and
-                acquire new skills.
+                experiences.
               </p>
               <Link
                 to={SakshamResume}
